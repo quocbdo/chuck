@@ -27,10 +27,10 @@ const HomePage = (props) => {
             />
           </div>
       </div>
-        <div className="HomePage-newjokebtn">
+        {/* <div className="HomePage-newjokebtn">
           <NewJokeButton
           />
-        </div>
+        </div> */}
     </div>
   );
 }

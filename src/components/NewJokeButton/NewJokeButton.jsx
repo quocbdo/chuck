@@ -1,16 +1,18 @@
-import React from 'react';
-import './NewJokeButton.css';
+//REMOVE COMPONENT
 
-const NewJokeButton = (props) => {
-  return (
-    <button
-      className="btn btn-default"
-      style={{margin: 10}}
-      onClick={props.handleNewJokeClick}
-    >
-      New Joke
-    </button>
-  );
-}
+// import React from 'react';
+// import './NewJokeButton.css';
 
-export default NewJokeButton;
+// const NewJokeButton = (props) => {
+//   return (
+//     <button
+//       className="btn btn-default"
+//       style={{margin: 10}}
+//       onClick={props.handleNewJokeClick}
+//     >
+//       New Joke
+//     </button>
+//   );
+// }
+
+// export default NewJokeButton;
