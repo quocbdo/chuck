@@ -15,17 +15,18 @@ import userService from '../../utils/userService';
 class App extends Component {
   constructor(props) {
     super(props);
-    
-  
+    this.state = {
+      user: null
+    }
   }
   
   /*---------- Helper Methods ----------*/
 
-  getInitialState() {
-    return {
-
-    };
-  }
+  // getInitialState() {
+  //   return {
+    
+  //   };
+  // }
 
 
   /*---------- Callback Methods ----------*/
@@ -61,7 +62,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' render={() =>
-              <HomePage
+              <HomePage user={this.state.user}
+                        handleLogout={this.handleLogout}
               />
             }/>
             <Route exact path='/signup' render={(props) =>

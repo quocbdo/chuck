@@ -3,6 +3,7 @@ var path = require ('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+
 require('dotenv').config();
 require('./config/database');
 
@@ -15,15 +16,14 @@ app.use(logger('dev'));
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
-
 app.use(bodyParser.json());
 
 // Mount our custom auth middleware
 app.use(require('./config/auth'));
 
 // Put API routes here, before the "catch all" route [MASTERMIND code below]
-// app.use('/api/users', require('./routes/api/users'));
-// app.use('/api/topscores', require('./routes/api/topscores'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/topjokes', require('./routes/api/topjokes'));
 
 // Put API routes here, before the "catch all" route
 

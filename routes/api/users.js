@@ -1,5 +1,3 @@
-// var mongoose = require('mongoose');
-// var bcrypt = require('bcrypt');
 var express = require('express');
 var router = express.Router();
 var User = require('../../models/user');
