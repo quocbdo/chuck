@@ -15,6 +15,16 @@ app.use(logger('dev'));
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
+
+app.use(bodyParser.json());
+
+// Mount our custom auth middleware
+app.use(require('./config/auth'));
+
+// Put API routes here, before the "catch all" route [MASTERMIND code below]
+// app.use('/api/users', require('./routes/api/users'));
+// app.use('/api/topscores', require('./routes/api/topscores'));
+
 // Put API routes here, before the "catch all" route
 
 // The following "catch all" route is necessary for

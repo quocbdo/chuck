@@ -1,0 +1,27 @@
+.HomePage {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.HomePage-display {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.HomePage-chuckhead {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  /* margin-left: 20px; */
+}
+
+.HomePage-newjokebtn {
+  display: flex;
+  justify-content: center;
+}
+
+.HomePage-nav {
+  width: 115px;
+}
+
