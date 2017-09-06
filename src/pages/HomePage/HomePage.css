@@ -16,6 +16,11 @@
   /* margin-left: 20px; */
 }
 
+.HomePage-jokearea {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18pt;
+}
+
 .HomePage-newjokebtn {
   display: flex;
   justify-content: center;

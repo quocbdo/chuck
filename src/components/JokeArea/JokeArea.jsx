@@ -1,8 +1,8 @@
 import React from 'react';
 import './JokeArea.css';
 
-class JokeArea extends React.Component{
-  constructor(){
+class JokeArea extends React.Component {
+  constructor() {
     super()
     this.state = {
       currentJoke: {
