@@ -11,7 +11,8 @@ var userSchema = new mongoose.Schema({
     lowercase: true,
     unique: true
   },
-    password: String
+    password: String,
+    jokes: [{type: Schema.Types.ObjectId, ref: 'Joke'}]
   }, {
     timestamps: true
   });

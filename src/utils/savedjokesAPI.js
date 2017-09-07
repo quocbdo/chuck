@@ -3,12 +3,14 @@ import tokenService from './tokenService';
 const BASE_URL = '/api/savedjokes/';
 
 function index() {
-  return fetch(BASE_URL, getAuthRequestOptions('GET'))
-  .then(res => {
-    if (res.ok) return res.json();
-    throw new Error('Bad credentials');
-  })
-  .then(jokes => jokes);
+  return new Promise(function(resolve, reject) {
+    fetch(BASE_URL, getAuthRequestOptions('GET'))
+    .then(res => {
+      if (res.ok) return res.json();
+      throw new Error('Bad credentials');
+    })
+    .then(jokes => resolve(jokes))
+  });
 }
 
 /*----- Helper Functions -----*/

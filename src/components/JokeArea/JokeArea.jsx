@@ -43,7 +43,7 @@ class JokeArea extends React.Component {
     .then(res => {
       console.log(res)
       return res.json()
-    }) .then(res => {
+    }).then(res => {
       console.log(res)
     })
   }

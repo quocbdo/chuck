@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var jokeSchema = new mongoose.Schema({
-  id: String,
+  // id: String,
   url: String,
   value: String
 });

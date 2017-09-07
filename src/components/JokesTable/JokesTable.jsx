@@ -4,18 +4,18 @@ const JokesTable = (props) => {
 
   return (
     <table className='table table-striped table-bordered'>
-      <thead>
+      {/* <thead>
         <tr>
           <th>Player</th>
           <th className='text-center'># Guesses </th>
           <th className='text-center'>Time</th>
         </tr>
-      </thead>
+      </thead> */}
       <tbody>
         {props.jokes.map(joke =>
-          <tr key={joke.player}>
+          <tr key={joke._id}>
             <td>{joke.player}</td>
-            <td className='text-center'>{joke.guesses}</td>
+            <td className='text-center'>{joke.value}</td>
           </tr>
         )}
       </tbody>

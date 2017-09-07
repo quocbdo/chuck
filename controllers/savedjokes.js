@@ -4,7 +4,6 @@ var SECRET = process.env.SECRET;
 
 function saveJoke(req, res) {
   console.log(req.body)
-  // res.json({cat: "hello"})
   var joke = new Joke(req.body);
   joke.save()
     res.json(joke)
@@ -14,6 +13,10 @@ function saveJoke(req, res) {
   //   res.json(joke)
   // })
   // .catch(err => res.status(400).json(err));
+}
+
+function jokeIndex(req, res) {
+
 }
 
 module.exports = {
