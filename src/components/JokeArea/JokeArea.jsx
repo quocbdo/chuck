@@ -1,11 +1,13 @@
 import React from 'react';
 import './JokeArea.css';
+import tokenService from '../../utils/tokenService';
 
 class JokeArea extends React.Component {
   constructor() {
     super()
     this.state = {
       currentJoke: {
+        category: null,
         value: null,
         id: null
       }
@@ -19,6 +21,7 @@ class JokeArea extends React.Component {
     .then(data => {
       this.setState({
         currentJoke: {
+          category: data.category,
           value: data.value,
           id: data.id
         }
@@ -26,20 +29,59 @@ class JokeArea extends React.Component {
     })
   }
 
+  saveJoke = () => {
+    const options = {
+      method: 'post',
+      headers: new Headers({
+        'Authorization': 'Bearer ' + tokenService.getToken(),
+        'Content-Type': 'application/json'
+      }),
+      body: JSON.stringify(this.state.currentJoke),
+    }
+    fetch(`/api/savedjokes`, options)
+  }
+
   render() {
     return (
       <div>
-        <div class="panel panel-default" style={{margin: 10}}>
-          <div class="panel-body">
-            {this.state.currentJoke.value}
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-block">
+                <h3 class="card-title">Category</h3>
+                <p class="card-text">{this.state.currentJoke.value}</p>
+                  <div>
+                    {/* <button
+                      className="btn btn-default"
+                      style={{margin: 10}}
+                    >
+                      Save Joke
+                    </button> */}
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
+        {/* <div class="container">
+          <div class="panel panel-default" style={{margin: 10}}>
+            <div class="panel-body">
+              {this.state.currentJoke.value}
+            </div>
+          </div>
+        </div> */}
         <button
           className="btn btn-default"
           style={{margin: 10}}
           onClick={this.getRandomJoke}
         >
           New Joke
+        </button>
+        <button
+          className="btn btn-default"
+          style={{margin: 10}}
+          onClick={this.saveJoke}
+        >
+          Save Joke
         </button>
       </div>
     );

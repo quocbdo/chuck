@@ -5,6 +5,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Display from '../../components/Display/Display';
 import ChuckHead from '../../components/ChuckHead/ChuckHead';
 import JokeArea from '../../components/JokeArea/JokeArea';
+import Categories from '../../components/Categories/Categories';
 import NewJokeButton from '../../components/NewJokeButton/NewJokeButton';
 
 const HomePage = (props) => {
@@ -26,7 +27,12 @@ const HomePage = (props) => {
             <JokeArea
             />
           </div>
+          <div className="HomePage-categories">
+            <Categories
+            />
+          </div>
       </div>
+
         {/* <div className="HomePage-newjokebtn">
           <NewJokeButton
           />

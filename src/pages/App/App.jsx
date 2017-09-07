@@ -9,7 +9,7 @@ import './App.css';
 import HomePage from '../HomePage/HomePage';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import TopJokesPage from '../TopJokesPage/TopJokesPage';
+import SavedJokesPage from '../SavedJokesPage/SavedJokesPage';
 import userService from '../../utils/userService';
 
 class App extends Component {
@@ -78,9 +78,9 @@ class App extends Component {
                 handleLogin={this.handleLogin}
               />
             }/>
-            <Route exact path='/topjokes' render={() => (
+            <Route exact path='/savedjokes' render={() => (
               userService.getUser() ?
-                <TopJokesPage />
+                <SavedJokesPage />
                   :
                 <Redirect to='/login' />
             )}/>

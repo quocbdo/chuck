@@ -2,11 +2,6 @@ var User = require('../models/user');
 var jwt = require('jsonwebtoken');
 var SECRET = process.env.SECRET;
 
-module.exports = {
-  signup,
-  login
-};
-
 function signup(req, res) {
   var user = new User(req.body);
   user.save()
@@ -42,3 +37,8 @@ function createJWT(user) {
     {expiresIn: '24h'}
   );
 }
+
+module.exports = {
+  signup,
+  login
+};

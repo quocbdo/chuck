@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './TopJokesPage.css';
-import topjokesAPI from '../../utils/topjokesAPI';
+import './SavedJokesPage.css';
+import savedjokesAPI from '../../utils/savedjokesAPI';
 import JokesTable from '../../components/JokesTable/JokesTable';
 
-class TopJokesPage extends Component {
+class SavedJokesPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -12,15 +12,15 @@ class TopJokesPage extends Component {
   }
   
   componentDidMount() {
-    topjokesAPI.index().then(jokes =>
+    savedjokesAPI.index().then(jokes =>
       this.setState({jokes})
     );
   }
 
   render() {
     return (
-      <div className='TopJokesPage'>
-        <header className='header-footer'>Top Jokes</header>
+      <div className='SavedJokesPage'>
+        <header className='header-footer'>Saved Jokes</header>
         <a href='/' className='return-link'>RETURN</a><br />
         <JokesTable jokes={this.state.jokes} />
       </div>
@@ -28,4 +28,4 @@ class TopJokesPage extends Component {
   }
 }
 
-export default TopJokesPage;
+export default SavedJokesPage;

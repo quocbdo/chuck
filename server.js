@@ -23,7 +23,7 @@ app.use(require('./config/auth'));
 
 // Put API routes here, before the "catch all" route [MASTERMIND code below]
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/topjokes', require('./routes/api/topjokes'));
+app.use('/api/savedjokes', require('./routes/api/savedjokes'));
 
 // Put API routes here, before the "catch all" route
 

@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var topjokesCtrl = require('../../controllers/topjokes');
+var savedjokesCtrl = require('../../controllers/savedjokes');
 
 /*---------- Protected Routes ----------*/
 
 // Protect this route with custom middleware
-router.get('/', checkAuth, topjokesCtrl.index);
+// router.get('/', checkAuth, savedjokesCtrl.index);
+router.post('/', checkAuth, savedjokesCtrl.saveJoke);
 
 /*----- Helper Functions -----*/
 
