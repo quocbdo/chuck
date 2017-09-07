@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './HomePage.css';
-import NavBar from '../../components/NavBar/NavBar';
+// import NavBar from '../../components/NavBar/NavBar';
 import Display from '../../components/Display/Display';
 import ChuckHead from '../../components/ChuckHead/ChuckHead';
 import JokeArea from '../../components/JokeArea/JokeArea';
@@ -28,11 +28,6 @@ const HomePage = (props) => {
             />
           </div>
       </div>
-
-        {/* <div className="HomePage-newjokebtn">
-          <NewJokeButton
-          />
-        </div> */}
     </div>
   );
 }
