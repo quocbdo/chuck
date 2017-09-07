@@ -30,6 +30,7 @@ class JokeArea extends React.Component {
   }
 
   saveJoke = () => {
+    console.log("test")
     const options = {
       method: 'post',
       headers: new Headers({
@@ -39,6 +40,12 @@ class JokeArea extends React.Component {
       body: JSON.stringify(this.state.currentJoke),
     }
     fetch(`/api/savedjokes`, options)
+    .then(res => {
+      console.log(res)
+      return res.json()
+    }) .then(res => {
+      console.log(res)
+    })
   }
 
   render() {
