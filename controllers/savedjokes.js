@@ -1,4 +1,4 @@
-var Joke = require('../models/joke');
+var Joke = require('../models/Joke');
 var jwt = require('jsonwebtoken');
 var SECRET = process.env.SECRET;
 
