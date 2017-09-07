@@ -10,6 +10,7 @@ import HomePage from '../HomePage/HomePage';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SavedJokesPage from '../SavedJokesPage/SavedJokesPage';
+import NavBar from '../../components/NavBar/NavBar';
 import userService from '../../utils/userService';
 
 class App extends Component {
@@ -66,33 +67,41 @@ class App extends Component {
             </ul>
           </div>
         </nav> */}
+          {/* <header className='App-header'>M O R E &nbsp;&nbsp; B A N G &nbsp;&nbsp; F O R &nbsp;&nbsp; C H U C K</header> */}
           <header className='App-header'>C H U C K &nbsp;&nbsp; F A C T S</header>
         <Router>
-          <Switch>
-            <Route exact path='/' render={() =>
-              <HomePage user={this.state.user}
-                        handleLogout={this.handleLogout}
-              />
-            }/>
-            <Route exact path='/signup' render={(props) =>
-              <SignupPage
-                {...props}
-                handleSignup={this.handleSignup}
-              />
-            }/>
-            <Route exact path='/login' render={(props) => 
-              <LoginPage
-                {...props}
-                handleLogin={this.handleLogin}
-              />
-            }/>
-            <Route exact path='/savedjokes' render={() => (
-              userService.getUser() ?
-                <SavedJokesPage />
-                  :
-                <Redirect to='/login' />
-            )}/>
-          </Switch>
+          <div>
+            <NavBar
+              user={this.state.user}
+              handleLogout={this.handleLogout}
+            />
+            <Switch>
+              <Route exact path='/' render={(props) =>
+                <HomePage user={this.state.user}
+                          handleLogout={this.handleLogout}
+                          history={props.history}
+                />
+              }/>
+              <Route exact path='/signup' render={(props) =>
+                <SignupPage
+                  {...props}
+                  handleSignup={this.handleSignup}
+                />
+              }/>
+              <Route exact path='/login' render={(props) => 
+                <LoginPage
+                  {...props}
+                  handleLogin={this.handleLogin}
+                />
+              }/>
+              <Route exact path='/savedjokes' render={() => (
+                userService.getUser() ?
+                  <SavedJokesPage />
+                    :
+                  <Redirect to='/login' />
+              )}/>
+            </Switch>
+          </div>
         </Router>
       </div>
     );

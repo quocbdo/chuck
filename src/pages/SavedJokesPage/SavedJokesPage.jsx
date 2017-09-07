@@ -14,7 +14,7 @@ class SavedJokesPage extends Component {
   componentDidMount() {
     savedjokesAPI.index().then(jokes =>
       this.setState({jokes})
-    ); console.log(this.state.jokes)
+    );
   }
 
   render() {

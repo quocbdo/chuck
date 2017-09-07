@@ -12,10 +12,6 @@ const HomePage = (props) => {
 
   return (
     <div className="HomePage">
-      <NavBar
-        user={props.user}
-        handleLogout={props.handleLogout}
-      />
       <div className="HomePage-display">
         <Display
         />
@@ -24,7 +20,7 @@ const HomePage = (props) => {
             />
           </div>
           <div className="HomePage-jokearea">  
-            <JokeArea
+            <JokeArea history={props.history}
             />
           </div>
           <div className="HomePage-categories">

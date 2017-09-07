@@ -5,7 +5,7 @@ var savedjokesCtrl = require('../../controllers/savedjokes');
 /*---------- Protected Routes ----------*/
 
 // Protect this route with custom middleware
-// router.get('/', checkAuth, savedjokesCtrl.index);
+router.get('/', checkAuth, savedjokesCtrl.index);
 router.post('/', checkAuth, savedjokesCtrl.saveJoke);
 
 /*----- Helper Functions -----*/

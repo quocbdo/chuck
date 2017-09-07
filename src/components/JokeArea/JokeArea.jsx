@@ -40,23 +40,21 @@ class JokeArea extends React.Component {
       body: JSON.stringify(this.state.currentJoke),
     }
     fetch(`/api/savedjokes`, options)
-    .then(res => {
-      console.log(res)
-      return res.json()
-    }).then(res => {
-      console.log(res)
-    })
+    .then(res => res.json()).then(joke => {
+      console.log(joke);
+      this.props.history.push('/savedjokes');
+    });
   }
 
   render() {
     return (
       <div>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-block">
-                <h3 class="card-title">Category</h3>
-                <p class="card-text">{this.state.currentJoke.value}</p>
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="card">
+              <div className="card-block">
+                {/* <h3 className="card-title">Category</h3> */}
+                <p className="card-text">{this.state.currentJoke.value}</p>
                   <div>
                     {/* <button
                       className="btn btn-default"
@@ -69,22 +67,16 @@ class JokeArea extends React.Component {
             </div>
           </div>
         </div>
-        {/* <div class="container">
-          <div class="panel panel-default" style={{margin: 10}}>
-            <div class="panel-body">
-              {this.state.currentJoke.value}
-            </div>
-          </div>
-        </div> */}
+        
         <button
-          className="btn btn-default"
+          className="btn btn-newjoke"
           style={{margin: 10}}
           onClick={this.getRandomJoke}
         >
           New Joke
         </button>
         <button
-          className="btn btn-default"
+          className="btn btn-savejoke"
           style={{margin: 10}}
           onClick={this.saveJoke}
         >

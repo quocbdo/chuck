@@ -1,24 +1,29 @@
 var Joke = require('../models/Joke');
+var User = require('../models/User');
 var jwt = require('jsonwebtoken');
 var SECRET = process.env.SECRET;
 
 function saveJoke(req, res) {
-  console.log(req.body)
   var joke = new Joke(req.body);
-  joke.save()
-    res.json(joke)
-
-  // .then(joke => {
-  //   console.log("test")
-  //   res.json(joke)
-  // })
-  // .catch(err => res.status(400).json(err));
+  joke.save(function(err) {
+    User.findById(req.user._id, function(err, user) {
+      user.jokes.push(joke._id);
+      user.save(function(err) {
+        res.json(joke);
+      });
+    });
+  });
 }
 
 function jokeIndex(req, res) {
-
+  User.findById(req.user._id).populate('jokes')
+  .then(user => {
+    console.log(user.jokes)
+    res.json(user.jokes)
+  });
 }
 
 module.exports = {
-  saveJoke: saveJoke
+  saveJoke: saveJoke,
+  index: jokeIndex
 };
