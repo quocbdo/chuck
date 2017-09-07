@@ -58,7 +58,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header className='header-footer'>C H U C K &nbsp;&nbsp; F A C T S</header>
+        {/* <nav>
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo right">Logo</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li><a href="sass.html">Sass</a></li>
+            </ul>
+          </div>
+        </nav> */}
+          <header className='App-header'>C H U C K &nbsp;&nbsp; F A C T S</header>
         <Router>
           <Switch>
             <Route exact path='/' render={() =>
