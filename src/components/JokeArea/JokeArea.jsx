@@ -8,7 +8,7 @@ class JokeArea extends React.Component {
     this.state = {
       currentJoke: {
         category: null,
-        value: null,
+        value: "Press New Joke to Begin",
         id: null
       }
     }
@@ -30,7 +30,6 @@ class JokeArea extends React.Component {
   }
 
   saveJoke = () => {
-    console.log("test")
     const options = {
       method: 'post',
       headers: new Headers({
@@ -50,24 +49,16 @@ class JokeArea extends React.Component {
     return (
       <div>
         <div className="row">
-          <div className="col-sm-6">
-            <div className="card">
+          <div className="col sm8">
+            <div className="card"
+                 //style={{margin: 10}}
+            >
               <div className="card-block">
-                {/* <h3 className="card-title">Category</h3> */}
                 <p className="card-text">{this.state.currentJoke.value}</p>
-                  <div>
-                    {/* <button
-                      className="btn btn-default"
-                      style={{margin: 10}}
-                    >
-                      Save Joke
-                    </button> */}
-                  </div>
               </div>
             </div>
           </div>
         </div>
-        
         <button
           className="btn btn-newjoke"
           style={{margin: 10}}

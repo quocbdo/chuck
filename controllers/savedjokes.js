@@ -23,6 +23,10 @@ function jokeIndex(req, res) {
   });
 }
 
+// function deleteJoke (req, res) {
+//   User.findById(req.user_id)
+// }
+
 module.exports = {
   saveJoke: saveJoke,
   index: jokeIndex

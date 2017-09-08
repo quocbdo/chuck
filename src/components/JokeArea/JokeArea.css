@@ -1,3 +1,4 @@
-.panel {
-  border: 1px;
+.card {
+  padding: 10px;
+  border-radius: 10px;
 }

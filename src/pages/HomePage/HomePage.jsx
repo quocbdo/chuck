@@ -5,12 +5,13 @@ import './HomePage.css';
 import Display from '../../components/Display/Display';
 import ChuckHead from '../../components/ChuckHead/ChuckHead';
 import JokeArea from '../../components/JokeArea/JokeArea';
-import Categories from '../../components/Categories/Categories';
+// import Categories from '../../components/Categories/Categories';
 import NewJokeButton from '../../components/NewJokeButton/NewJokeButton';
 
 const HomePage = (props) => {
 
   return (
+    <container>
     <div className="HomePage">
       <div className="HomePage-display">
         <Display
@@ -23,12 +24,13 @@ const HomePage = (props) => {
             <JokeArea history={props.history}
             />
           </div>
-          <div className="HomePage-categories">
+          {/* <div className="HomePage-categories">
             <Categories
             />
-          </div>
+          </div> */}
       </div>
     </div>
+    </container>
   );
 }
 

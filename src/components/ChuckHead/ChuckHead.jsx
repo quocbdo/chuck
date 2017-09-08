@@ -3,7 +3,7 @@ import './ChuckHead.css';
 
 const ChuckHead = () => {
   return (
-    <img src="http://via.placeholder.com/300x300" alt=""
+    <img className="ChuckHead-head"src="https://imgur.com/e2GxzQF.png" alt=""
       style={{margin: 10}}
     />
   );

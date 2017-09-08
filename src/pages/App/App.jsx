@@ -23,12 +23,7 @@ class App extends Component {
   
   /*---------- Helper Methods ----------*/
 
-  // getInitialState() {
-  //   return {
-    
-  //   };
-  // }
-
+  
 
   /*---------- Callback Methods ----------*/
 
@@ -59,16 +54,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <nav>
-          <div class="nav-wrapper">
-            <a href="/" class="brand-logo right">Logo</a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-              <li><a href="sass.html">Sass</a></li>
-            </ul>
-          </div>
-        </nav> */}
-          {/* <header className='App-header'>M O R E &nbsp;&nbsp; B A N G &nbsp;&nbsp; F O R &nbsp;&nbsp; C H U C K</header> */}
-          <header className='App-header'>C H U C K &nbsp;&nbsp; F A C T S</header>
+        <header className='App-header'>M O R E &nbsp;&nbsp; B A N G &nbsp;&nbsp; F O R &nbsp;&nbsp; Y O U R &nbsp;&nbsp; C H U C K</header>
         <Router>
           <div>
             <NavBar
