@@ -28,6 +28,7 @@ More Bang For Your Chuck is a web application that uses the chucknorris.io API t
 ## Unresolved problems
 * Minor component layout issues
 * Need to finish delete from list functionality
+* Protect Save Joke route for authenticated users
 
 ## Future Features:
 * Filtering jokes by category
