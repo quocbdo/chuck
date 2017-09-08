@@ -1,13 +1,10 @@
-
-
 # More Bang For Your Chuck
 
 ## Fact: "Chuck Norris doesn't use web standards as the web will conform to him."
                             
-More Bang For Your Chuck is a web application that uses the chucknorris.io API to display random, irreverent Chuck Norris "facts" for
+More Bang For Your Chuck is a web application that uses the chucknorris.io API to display random, irreverent Chuck Norris "facts" for your entertainment and viewing pleasure. If you have an excess of free time or want to test your limits of poor taste, this is the app for you! Sign up as a user and you can save all your favorite Chuck Norris "facts" to impress all your friends at any social function or gathering!
 
-
-<img src="http://i.imgur.com/qn3K6jf.png">
+<img src="https://imgur.com/kVEt975.jpg">
 
 ## Technologies
 * HTML
@@ -28,13 +25,11 @@ More Bang For Your Chuck is a web application that uses the chucknorris.io API t
 
 [More Bang For Your Chuck](https://bangforyourchuck.herokuapp.com/)
 
-
 ## Unresolved problems
-
-
-
+* Minor component layout issues
+* Need to finish delete from list functionality
 
 ## Future Features:
-* Movie Recommendation list based on movie preferences
-* Message board for users to openly discuss film
-* Advanced search function to look up movies by director or cast members
+* Filtering jokes by category
+* Requiring log in to view explicit jokes
+* Fully realized visual design
