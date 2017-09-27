@@ -8,7 +8,8 @@ class JokeArea extends React.Component {
     this.state = {
       currentJoke: {
         category: null,
-        value: "Press New Joke to Begin",
+        value: "Welcome, I'm Chuck! To learn more about me, press New Joke to begin.",
+        // value: "Press New Joke to Begin",
         id: null
       }
     }
@@ -51,7 +52,7 @@ class JokeArea extends React.Component {
         <div className="row">
           <div className="col sm8">
             <div className="card"
-                 //style={{margin: 10}}
+                 style={{margin: 10, marginRight: 50}}
             >
               <div className="card-block">
                 <p className="card-text">{this.state.currentJoke.value}</p>
@@ -61,14 +62,14 @@ class JokeArea extends React.Component {
         </div>
         <button
           className="btn btn-newjoke"
-          style={{margin: 10}}
+          style={{margin: 20}}
           onClick={this.getRandomJoke}
         >
           New Joke
         </button>
         <button
           className="btn btn-savejoke"
-          style={{margin: 10}}
+          style={{margin: 20}}
           onClick={this.saveJoke}
         >
           Save Joke

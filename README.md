@@ -1,4 +1,4 @@
-# More Bang For Your Chuck
+# More Bang For Your Chuck (updated 9/27/17)
 
 ## Fact: "Chuck Norris doesn't use web standards as the web will conform to him."
                             
@@ -26,7 +26,6 @@ More Bang For Your Chuck is a web application that uses the chucknorris.io API t
 [More Bang For Your Chuck](https://bangforyourchuck.herokuapp.com/)
 
 ## Unresolved problems
-* Minor component layout issues
 * Need to finish delete from list functionality
 * Protect Save Joke route for authenticated users
 

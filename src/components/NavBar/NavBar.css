@@ -2,7 +2,11 @@
   display: flex;
   justify-content: center;
   margin: 0 0 20px;
-  font-family: 'Special Elite', cursive;
+  margin-top: 40px;
+  font-family: 'Press Start 2P', cursive;
+  /* font-size: 12px; */
+  /* font-family: 'Special Elite', cursive;
+  font-size: 20px; */
 }
 
 .NavBar-link {

@@ -20,8 +20,8 @@ class SavedJokesPage extends Component {
   render() {
     return (
       <div className='SavedJokesPage'>
-        <header className='header-footer'>Saved Jokes</header>
-        <a href='/' className='return-link'>RETURN</a><br />
+        {/* <header className='header-footer'>Saved Jokes</header> */}
+        <a href='/' className='return-link'>RETURN HOME</a><br />
         <JokesTable jokes={this.state.jokes} />
       </div>
     );
