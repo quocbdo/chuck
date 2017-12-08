@@ -1,4 +1,4 @@
-# More Bang For Your Chuck (updated 9/27/17)
+# More Bang For Your Chuck
 
 ## Fact: "Chuck Norris doesn't use web standards as the web will conform to him."
                             
