@@ -26,7 +26,7 @@ More Bang For Your Chuck is a web application that uses the chucknorris.io API t
 [More Bang For Your Chuck](https://bangforyourchuck.herokuapp.com/)
 
 ## Unresolved problems
-* Need to finish delete from list functionality
+* Need to finish delete functionality on Saved Jokes page
 * Protect Save Joke route for authenticated users
 
 ## Future Features:
