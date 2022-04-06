@@ -54,8 +54,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header className='App-header'><img className='App-header-logo' src="https://imgur.com/CdvGsCd.png" alt="" style={{height: 125}}></img></header>
-        {/* <header className='App-header'>M O R E &nbsp;&nbsp; B A N G &nbsp;&nbsp; F O R &nbsp;&nbsp; Y O U R &nbsp;&nbsp; C H U C K</header> */}
+        <header className='App-header'><img className='App-header-logo' src="https://imgur.com/CdvGsCd.png" alt="" style={{height: 125}}></img></header>        
         <Router>
           <div>
             <NavBar
